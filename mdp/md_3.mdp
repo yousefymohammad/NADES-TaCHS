@@ -1,0 +1,85 @@
+;  *** VARIOUS PREPROCESSING ***
+title               = TaCHS aqueous NADES production MD
+;cpp                 =  /usr/bin/cpp
+
+;  *** RUN CONTROL ***
+integrator          = md      ; integrator
+dt                  = 0.002   ; time step [ps]
+nsteps              = 100000000  ; maximum number of steps to integrate
+comm-mode           = Linear  ; COM motion (linear=remove COM translation)
+nstcomm             = 100     ; number of steps for center of mass motion removal
+comm-grps           =         ; groups for COM motion removal (default is the whole system)
+
+
+;  *** NEIGHBOR LIST ***
+cutoff-scheme       = Verlet ; Neighbor List algorithm (Verlet, group)
+nstlist             = 100    ; nblist update frequency [steps]
+rlist               = 1.4   ; Neighbor List cut-off [nm]
+pbc                 = xyz   ; Periodic boundary conditions (xyz or none)
+
+
+;  *** ELECTROSTATICS ***
+coulombtype              = PME    ; Method for doing electrostatics
+rcoulomb_switch          = 1.2    ; where to start switching the Coulomb potential [nm]
+rcoulomb                 = 1.4    ; Coulomb cut-off [nm]
+epsilon_r                = 1      ; Dielectric constant (DC) for cut-off or DC of reaction field
+fourierspacing           = 0.12   ; Spacing for the PME/PPPM FFT grid
+pme_order                = 4      ; EWALD/PME/PPPM parameter
+
+
+;  *** VDW ***
+vdw_type                 = Cut-off  ; Method for doing Van der Waals
+vdw-modifier             = Potential-shift-Verlet
+rvdw_switch              = 1.2        ; where to start switching the LJ potential [nm]
+rvdw                     = 1.4      ; cut-off radius for LJ [nm]
+DispCorr                 = EnerPres       ; apply long range dispersion corrections for Energy and Pressure
+
+
+;  *** THERMOSTATS ***
+Tcoupl                   = v-rescale  ; thermostat (no, berendsen or nose-hoover)
+nhchainlength            = 1         ; number of chained Nose-Hoover thermostats (for velocity Verlet, leap-frog md only supports 1)
+tc-grps                  = Protein non-Protein   ; groups to couple separately
+tau_t                   = 1.      1.                  ; time constant, in ps
+ref_t                   = 300.15   300.15                 ; reference temperature, one for each group, in K
+
+;  *** BAROSTATS ***
+Pcoupl                   = Parrinello-Rahman      ; barostat (no, berendsen, or Parrinello-Rahman)
+Pcoupltype               = isotropic  ; pressure coupling type
+tau_p                    = 5.      ; time constant [ps]
+compressibility          = 5e-5  ; compressibility [1/bar]
+ref_p                    = 1.      ; reference pressure [bar]
+
+
+; *** SIMULATED ANNEALING **
+annealing                = no ; Type of annealing for each temperature group (no/single/periodic)
+annealing_npoints        =    ; Number of time points to use for specifying annealing in each group
+annealing_time           =    ; List of times at the annealing points for each group
+annealing_temp           =    ; Temp. at each annealing point, for each group.
+
+
+
+;  *** VELOCITY HANDLING ***
+gen_vel                  = no     ; continue with velocities from NPT
+
+
+;  *** BONDS ***
+constraints              = hbonds ; what is constraint (none=only for those defined explicitly in FF files)
+constraint-algorithm     = Lincs  ; type of constraint algorithm
+continuation             = yes   ; continue from the equilibrated NPT state
+lincs_order              = 4      ; highest order in the expansion of the constraint coupling matrix
+lincs_iter               = 8      ; number of iterations in the final step of LINCS
+lincs_warnangle          = 30     ; max. angle that a bond can rotate before Lincs will complain
+
+
+;  *** OUTPUT CONTROL OPTIONS ***
+nstxout                  = 0     ; output frequency for coordinates [steps]
+nstvout                  = 0     ; output frequency for velocities [steps]
+nstfout                  = 0     ; output frequency for forces [steps]
+
+nstlog                   = 200000 ; output frequency to write energies to log file [steps]
+nstenergy                = 200000  ; output frequency to write energies to energy file [steps]
+nstxout-compressed       = 200000              ; save compress coordinate every 
+nstcalcenergy            = 200000              ; calculate energies/pressures every nstenergy steps
+
+;energygrps               = Mol CL Ch    ; groups to write to energy file
+

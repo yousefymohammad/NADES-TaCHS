@@ -1,0 +1,31 @@
+;
+; Chloride, 
+;
+;[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+;Cl            17  35.45300  0.00000000  A     0.44010      0.41848
+
+[ moleculetype ]
+; name  nrexcl
+CLO         3
+
+[ atoms ]
+;   nr    type   resnr  residu    atom    cgnr        charge          mass
+     1     Cl     1       CLO       CL     1       -0.90        35.45300 
+   
+[ bonds ]
+;  ai    aj funct           c0           c1
+
+[ pairs]
+; i    j       func
+
+[ angles ]
+;  ai    aj    ak funct           c0        c1
+; H3
+
+;
+[ dihedrals ]
+
+;#ifdef POSRES
+;#include "posre_cl.itp"
+;#endif

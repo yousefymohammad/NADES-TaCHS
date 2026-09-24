@@ -1,0 +1,27 @@
+# Simulation outputs
+runs/
+*.xtc
+*.trr
+*.edr
+*.cpt
+*.xvg
+*.log
+mdout.mdp
+
+# Local system coordinates and compiled run inputs
+systems/*/*.gro
+systems/*/*.tpr
+
+# GROMACS backups and scheduler output
+\#*\#
+*.o[0-9]*
+*.e[0-9]*
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,11 @@
+; position restraints for Ch_&_!H* of Choline  cation DES [CHOd]
+
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+   5    1       1000       1000       1000
+   6    1       1000       1000       1000
+   7    1       1000       1000       1000
+   8    1       1000       1000       1000
+  17    1       1000       1000       1000
+  18    1       1000       1000       1000

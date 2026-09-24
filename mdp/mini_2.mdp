@@ -1,0 +1,32 @@
+; Run control parameters
+integrator  = steep
+emtol       = 5000.0
+emstep      = 0.01
+nsteps      = 50000
+
+; Output control
+nstxout     = 500
+nstvout     = 500
+nstenergy   = 500
+nstlog      = 500
+
+; Neighborsearching and short-range nonbonded interactions
+cutoff-scheme   = Verlet
+nstlist         = 10
+ns-type         = grid
+pbc             = xyz
+rlist           = 1.2
+
+; Electrostatics
+coulombtype     = PME
+rcoulomb        = 1.2
+
+; VdW
+vdwtype         = cutoff
+rvdw            = 1.2
+
+; Position restraints
+define          = -DPOSRES
+
+; Temperature coupling is off during EM
+tcoupl          = no

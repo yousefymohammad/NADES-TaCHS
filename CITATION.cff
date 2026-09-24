@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "TaCHS-Aqueous-NADES-MD"
+type: software
+authors:
+  - family-names: "Yousefi"
+    given-names: "Mohammad"
+    affiliation: "Department of Bioorganic Chemistry, Leibniz Institute of Plant Biochemistry, Halle, Germany"
+version: 1.0.0
+date-released: 2026-09-23
+license: MIT
+keywords:
+  - chalcone synthase
+  - Triticum aestivum
+  - natural deep eutectic solvents
+  - molecular dynamics
+  - GROMACS

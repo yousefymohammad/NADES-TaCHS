@@ -1,0 +1,24 @@
+REMARK YASARA *************************************************************
+REMARK YASARA *                                                           *
+REMARK YASARA *                     Y  A  S  A  R  A                      *
+REMARK YASARA *                                                           *
+REMARK YASARA *   Yet Another Scientific Artificial Reality Application   *
+REMARK YASARA *                                                           *
+REMARK YASARA *         MOLECULE STRUCTURE FILE, XPLOR PDB FORMAT         *
+REMARK YASARA * Note that this PDB format variant applies the XPLOR naming*
+REMARK YASARA *    rules for equivalent hydrogens and terminal oxygens.   *
+REMARK YASARA * NON-STANDARD FORMAT, BE CAREFUL WHEN USING OTHER PROGRAMS *
+REMARK YASARA *                                                           *
+REMARK YASARA * Just use YASARA every day to make your questions go away! *
+REMARK YASARA *                                                           *
+REMARK YASARA *                      www.YASARA.org                       *
+REMARK YASARA *                                                           *
+REMARK YASARA *************************************************************
+REMARK YASARA
+REMARK YASARA Written on:        Thu Apr 06 16:02:56 2023
+REMARK YASARA Number of models: 1
+REMARK YASARA Number of atoms:   1
+REMARK YASARA Please address questions or suggestions to: Eliza@yasara.org
+REMARK YASARA
+HETATM    1 CL    CL     0      -0.381   0.502   0.000  0.00  0.00          
+END
