@@ -1,6 +1,6 @@
 # TaCHS-Aqueous-NADES-MD
 
-Classical molecular dynamics simulations of wheat chalcone synthase from *Triticum aestivum* (TaCHS) in water and aqueous natural deep eutectic solvent (NADES) environments.
+Classical molecular dynamics simulations of chalcone synthase from *Triticum aestivum* (TaCHS) in water and aqueous natural deep eutectic solvent (NADES) environments.
 
 This repository contains the simulation inputs, system-preparation files, and computational workflows used to investigate how aqueous NADES composition and concentration affect the structural dynamics, stability, and active-site environment of dimeric TaCHS. The simulated systems include choline chloride- and betaine-based NADES containing glycerol, ethylene glycol, or xylitol at different concentrations, together with a water control.
 
