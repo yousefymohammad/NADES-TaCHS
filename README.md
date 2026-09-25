@@ -14,7 +14,7 @@ This repository contains the simulation inputs, system-preparation files, and co
 | `ChCl_Xyl` | Choline chloride + xylitol | 10, 25 |
 | `Betaine_Gly` | Betaine + glycerol | 10, 25, 50, 75 |
 | `Betaine_EG` | Betaine + ethylene glycol | 10, 25, 50, 75 |
-| `nonades` | Water control | 1 |
+| `nonades` | Water control |  |
 
 The NADES labels correspond to the aqueous NADES percentages used in the
 project. Exact molecular populations are recorded in each topology's
